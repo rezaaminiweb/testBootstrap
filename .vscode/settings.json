@@ -1,0 +1,6 @@
+{
+    "css.autoValidation": "Always",
+    "css.styleSheets": [
+        "**"
+    ]
+}

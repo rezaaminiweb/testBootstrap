@@ -1,0 +1,72 @@
+*,*::after,*::before{
+margin: 0;padding: 0;box-sizing: border-box;
+
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.sds{
+    color: red;
+    background-color:  black;
+}
+.ulnav{
+    list-style-type: none;
+    padding: 2rem  0rem;
+    margin: 0;
+}
+p,ul,li,a{
+    padding: 0 ;
+    margin:0 ;
+}
+@font-face {
+    font-family: poppinsBlack;
+    src: url(../font/Poppins-Black.ttf);
+}
+@font-face {
+    font-family: poppinsBold;
+    src: url(../font/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: poppinsEBold;
+    src: url(../font/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family:poppinsELight ;
+    src: url(../font/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: poppinsLight;
+    src: url(../font/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: poppinsMedium;
+    src: url(../font/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: poppinsRegular;
+    src: url(../font/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: poppinsSBold;
+    src: url(../font/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: poppinsThin;
+    src: url(../font/Poppins-Thin.ttf);
+}
+body{
+    font-family: poppinsBold;
+}
+.parent{
+    width: 100%;
+    background-color: #c1282a;
+    padding: 1.5rem 0rem;
+
+}
+.ulnav2{
+    list-style-type: none;
+}
+.ulnav2>li{
+    margin: 0 1rem;
+}

@@ -77,4 +77,15 @@ body {
 
 .ulnav2 > li {
   margin: 0 1rem;
+}
+
+.sizeicons {
+  font-size: 0.7rem;
+  display: flex;
+  margin: 0px 10px;
+  align-items: center;
+}
+
+.sdimg {
+  filter: opacity(25%);
 }/*# sourceMappingURL=style.css.map */

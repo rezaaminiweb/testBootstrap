@@ -84,7 +84,7 @@ body {
 .parent {
     width: 100%;
     background-color: #c1282a;
-    padding: 1.5rem 0rem;
+    padding: .6rem 0rem;
 
 }
 
@@ -105,8 +105,56 @@ body {
 .ulnav2>li {
     margin: 0 1rem;
 }
+.menuClose{
+    color: #dfd3d3;
+}
+.ulnav2mob{
+    height: 100vh;
+    background-color: rgba(46, 45, 45, 0.738);
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    left: -100%;
+    top: 0;
+    transition: .4s ease-in-out;
+    position: fixed;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    >li{
+        font-size: 16px;
+    }
+}
+.divelement{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.414);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition: .4s ease-in-out;
+    
+}
+.spanop{
+    opacity: 0;
+    transition: .4s ease-in-out;
+    visibility: hidden;
+}
+.spanopcl{
+    transition: .4s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
 .logoheader{
     font-size: 2rem;
+}
+.iconlistmob{
+    top: 20px;
+    right: 50px;
+    font-size: 25px;
+    cursor: pointer;
 }
 .spanmesh{
     position: absolute;
@@ -154,14 +202,21 @@ body {
     top: 0;
     object-fit: cover;
     z-index: 90;
-    height: 100%;
+    height:100%;
+    width: 100%;
 }
 
 .figabs {
     left: 10%;
     top: 50%;
-    width: 30%;
+    width: 90%;
 
+}
+@media (min-width: 992px) {
+    .figabs{
+        width: 30%;
+    }
+    
 }
 
 .figabs>h4 {
@@ -207,8 +262,8 @@ body {
 
 .nimradius {
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height:100px;
     background-color: #c1282a;
     position: absolute;
     right: 7%;
@@ -217,6 +272,13 @@ body {
     animation: radius2 15s linear infinite;
     z-index: 0;
     transform: translate(0px, 0px);
+}
+@media (min-width:992px) {
+    .nimradius{
+        width: 300px;
+    height: 300px;
+    }
+    
 }
 
 @keyframes radius2 {
@@ -274,23 +336,30 @@ body {
 }
 
 .next2 {
-    right: -6%;
+    right: 0%;
     color: white;
     background-color: rgba(0, 0, 0, 0.345);
-    padding: 2rem;
-    width: 70px !important;
-    height: 70px !important;
+    padding:0;
+    width: 50px !important;
+    height: 50px !important;
     transition: .4s ease-in-out;
 }
-
+@media (min-width:992px) {
+    .next2{
+        right: -6%;
+        width: 70px !important;
+    height: 70px !important;
+        
+    }
+    
+}
 .next2:hover {
-    background-color: rgba(0, 0, 0, 0.237);
+    background-color: white;
+    color: rgba(0, 0, 0, 0.345);
 
 }
 
-.next2:active {
-    background-color: rgba(0, 0, 0, .345);
-}
+
 
 .next2::after {
     display: flex;
@@ -300,15 +369,27 @@ body {
 }
 
 .prev2 {
-    left: -6%;
+    left: 0%;
     color: white;
-    width: 70px !important;
-    height: 70px !important;
+    width: 50px !important;
+    height: 50px !important;
     background-color: rgba(0, 0, 0, 0.345);
-    padding: 2rem;
+    padding: 0;
     transition: .4s ease-in-out;
 }
-
+@media (min-width:992px) {
+    .prev2{
+        left: -6%;
+        width: 70px !important;
+    height: 70px !important;
+    }
+    
+}
+.menuLi{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
 .prev2::after {
     display: flex;
     align-items: center;
@@ -318,13 +399,12 @@ body {
 }
 
 .prev2:hover {
-    background-color: rgba(0, 0, 0, 0.237);
+    background-color: white;
+    color: rgba(0, 0, 0, 0.345);
 
 }
 
-.prev2:active {
-    background-color: rgba(0, 0, 0, .345);
-}
+
 
 .nimBorder {
     display: flex;
@@ -364,8 +444,57 @@ body {
 }
 
 .w-30 {
-    width: 30%;
+    width: 100%;
+    position: relative;
 }
+.w-30:hover::before{
+    height: 100%;
+}
+.w-30::before{
+    content: '';
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s ease-in-out;
+    width: 100%;
+    height: 0;
+    z-index: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.177);
+
+}
+.w-30::after{
+    content:'';
+    transition: 1s ease-in-out;
+    width: 0%;
+    height:3px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right , black , rgb(87, 6, 149) , rgb(163, 6, 190) , rgb(189, 11, 94) ,rgb(226, 25, 45));
+
+}
+.w-30:hover::after{
+    width: 100%;
+
+}
+.widths{
+    width: 100%;
+}
+@media (min-width:992px) {
+    .widths{
+        width: 50%;
+    }
+    
+}
+@media (min-width:992px) {
+    .w-30{
+        width: 30%;
+    }
+    
+}
+
 
 .ahrefs {
     color: #c1282a;
@@ -397,13 +526,7 @@ body {
     background-color: #c1282a;
 }
 
-.divredback::after {
-    width: 100%;
-    height: 3px;
-    background-image: linear-gradient(to right, );
 
-
-}
 
 .spansop {
     font-family: poppinsRegular;
@@ -497,6 +620,7 @@ body {
     background-color: #c1282a;
     color: white;
     transition: .4s ease-in-out;
+ 
 }
 .Learnhref:hover{
     background-color: white;
@@ -546,15 +670,28 @@ body {
     align-items: start;
     background-color: #c1282a;
     border: 5px solid white;
-    left: 40%;
+    left: 30%;
     top: 45%;
     width: 300px;
+    position: static;
+    
+}
+@media (min-width:992px) {
+    .divimg12{
+        position: absolute;
+    }
     
 }
 .imgwidheight{
-    width: 70%;
+    width: 100%;
     height: 60%;
 
+}
+@media (min-width:992px){
+    .imgwidheight{
+
+        width: 70%;
+    }
 }
 .stariconsw{
     display: flex;

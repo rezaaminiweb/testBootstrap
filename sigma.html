@@ -104,7 +104,21 @@
         </header>
         <section class="w-100 sdimg  ">
             <section class="container mx-auto position-relative preserve3d  h-100">
-
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
                 <figure class=" position-absolute top-0 z-3   d-flex justify-content-between align-items-center  h-100 ">
                     
                     <figcaption class=" figabs">
@@ -140,10 +154,27 @@
 
             </section>
         </section>
+        <section class="w-100 ">
+            <section class="container mx-auto bg-black p-5">
+                <div class="d-flex " >
+                    
+                </div>
+
+            </section>
+
+        </section>
     </main>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.js" crossorigin="anonymous"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+</script>
 
 </html>

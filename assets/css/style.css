@@ -88,7 +88,9 @@ body {
 }
 
 .sdimg {
-  filter: opacity(25%);
+  background-image: url("../img/memphis-1.jpg");
+  filter: opacity(100%);
+  height: 100vh;
 }
 
 .imgabs {

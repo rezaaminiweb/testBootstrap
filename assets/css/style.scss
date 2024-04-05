@@ -78,10 +78,27 @@ body{
     align-items: center;
     
 }
-.sdimg{
+.sdimg::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+    display: block;
+    opacity: 20%;
     background-image: url('../img/memphis-1.jpg');
-    filter: opacity(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+.sdimg{
     height: 100vh;
+    position: relative;
+
+}
+.transformstel{
+    transform: translate(10% , 0%);
 }
 .imgabs{
     right: 6%;
@@ -94,7 +111,7 @@ body{
     left: 10%;
     top: 50%;
     width: 30%;
-    transform: translate(0% , -50%);
+    
 }
 .figabs>h4{
     color: rgb(193, 40, 42);
@@ -111,7 +128,7 @@ body{
     padding-top: 2rem;
 }
 .figabs>div>a{
-    box-shadow: 5px 6px 150px  black;
+    box-shadow: 5px 6px 150px  rgba(0, 0, 0, 0.494);
     padding: 1.2rem;
     border-radius: 4px;
     font-family:poppinsBold ;
@@ -123,7 +140,12 @@ body{
 .figabs>div>a:hover{
     background-color: transparent;
     color: #c1282a;
-    box-shadow: 2px 3px 50px  black;
+    box-shadow: 2px 3px 50px  rgba(0, 0, 0, 0.494);
+}
+.dstar{
+    background-color: black;
+    left: 20%;
+    top: 0;
 }
 .nimradius{
     display: flex;
@@ -132,10 +154,10 @@ body{
     background-color: #c1282a;
     position: absolute;
     right: 7%;
-    top: 20%;
+    top: 10%;
     border-radius: 60% 40% 30% 40%;
     animation: radius2 15s linear infinite;
-    z-index: 50;
+    z-index: 0;
     transform: translate(0px , 0px);
 }
 @keyframes radius2 {
@@ -177,5 +199,38 @@ body{
             border-radius: 60% 40% 30% 40%;
             transform: translate(0px , 0px);
         }
+    
+}
+.preserve3d{
+    transform-style: preserve-3d;
+}
+.nimBorder{
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 5px solid #c1282a;
+    top: 10%; left: 30%;
+    border-radius: 50%;
+    transform: perspective(800px) scale3d(1, 1.2, .4)  translate(200px , 0px);
+    animation: nimBorders 10s linear  infinite ;
+
+}
+@keyframes nimBorders {
+    0%{
+        transform: perspective(800px) scale3d(1, 1.2, .4) translate(100px,100px) ;
+    }
+    25%{
+        transform: perspective(800px) scale3d(1.5, .9, 1.2) translate(0px , 0px);
+    }
+    50%{
+        transform: perspective(800px) scale3d(1, 1.2, .2) translate(-100px , 0px);
+    }
+    75%{
+        transform: perspective(800px) scale3d(1.7, .9, .4) translate(0px , 0px);
+    }
+    100%{
+        transform: perspective(800px) scale3d(1, 1.2, .4) translate(100px , 100px);
+    }
     
 }

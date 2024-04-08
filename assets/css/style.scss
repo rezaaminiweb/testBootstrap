@@ -90,7 +90,7 @@ body {
 
 .ulnav2 {
     list-style-type: none;
-    font-family: poppinsRegular;
+    font-family: poppinsBold;
     font-size: 12px;
 }
 .compol{
@@ -118,11 +118,12 @@ body {
     top: 0;
     transition: .4s ease-in-out;
     position: fixed;
-    width: 60%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    font-family: poppinsRegular;
     >li{
         font-size: 16px;
     }
@@ -380,7 +381,40 @@ body {
     }
 
 }
-
+.listul{
+    backdrop-filter: blur(500px);
+    left: -40%;
+    top: 100%;
+    min-width: 220%;
+    list-style-type: none;
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    background-color: rgba(255, 255, 255, 0.903);
+    transition: .4s ease-in-out;
+    z-index: 50;
+}
+.listul>li{
+    width: fit-content;
+    transition: .4s ease-in-out;
+    padding: .7rem 0rem;
+    
+}
+.listul>li:hover>a{
+    color: #c1282a !important;
+}
+.listul>li>a{
+    transition: .4s ease-in-out;
+}
+.starli:hover>ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    
+    
+}
 .preserve3d {
     transform-style: preserve-3d;
 }

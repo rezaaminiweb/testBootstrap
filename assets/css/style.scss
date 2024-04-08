@@ -565,6 +565,7 @@ body {
     transform: translate(-50%, -50%);
     border: 1px solid white;
     padding: 1rem;
+    transition: opacity .4s 1s ease-in-out , visibility .4s 1s ease-in-out;
 }
 
 .spansicons>i {
@@ -708,8 +709,65 @@ body {
     color: white;
     padding: .4rem .2rem;
 }
+.serchbars{
+    font-size: 1.5rem;
+}
 .ulabsbars{
+    width: 78%;
     height: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease-in-out;
+}
+@media (min-width:450px) {
+    .ulabsbars{
+        width: 65%;
+    }
+    
+}
+@media (min-width:670px) {
+    .ulabsbars{
+        width: 55%;
+    }
+    
+}
+@media (min-width:768px) {
+    .ulabsbars{
+        width: 40%;
+    }
+    
+}
+@media (min-width:992px) {
+    .ulabsbars{
+        width: 30%;
+    }
+    
+}
+@media (min-width:1200px) {
+    .ulabsbars{
+        width: 25%;
+    }
+    
+}
+.starvideo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s 1s ease-in-out , visibility .4s 1s ease-in-out;
+
+}
+.classvideo0{
+    opacity: 0 !important;
+    visibility: hidden;
+    
+}
+.classvideo1{
+    opacity: 1 !important;
+    visibility: visible;
+
 }
 .span0bar{
     display: flex;
@@ -832,6 +890,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 }
 .starterp{

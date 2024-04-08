@@ -104,6 +104,7 @@ body {
 }
 .ulnav2>li {
     margin: 0 1rem;
+    padding: 1.7rem 0rem;
 }
 .menuClose{
     color: #dfd3d3;
@@ -648,11 +649,67 @@ body {
 }
 .ulnav01{
     list-style-type: none;
-    width: 200%;
+    width: 200% ;
     font-family: poppinsBold;
     z-index: 50; 
     text-transform: capitalize;
    
+}
+.ulnav02{
+    width: 250%;
+}
+.linavbars{
+    padding: 0rem 0rem;
+}
+.linavbars>p{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    &:hover{
+        color: #c1282a;
+    }
+    &:nth-of-type(1){
+        font-family: poppinsBold;
+    }
+    padding: .6rem 0rem;
+}
+.ulnavbars{
+    list-style-type: none;
+    
+}
+.divinputbars{
+    background-color: white;
+    padding: .5rem .7rem;
+  
+}
+.inputsearch{
+    background-color: transparent;
+    color: black;
+    border: none;
+    height: 100%;
+    padding: 0rem .5rem ;
+    font-family: poppinsRegular;
+    outline: none;
+}
+.bordernavsearch{
+    border: 2px solid #c1282a;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+}
+.righticonsbar{
+    cursor: pointer;
+    height: 100%;
+    font-size: 2rem;
+    background-color: #c1282a;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: .4rem .2rem;
+}
+.ulabsbars{
+    height: 70%;
 }
 .span0bar{
     display: flex;
@@ -662,6 +719,9 @@ body {
     transform: scaleY(0);
     transition: .4s ease-in-out;
     z-index: 90;
+}
+.zirmenuul{
+    left: -30%;
 }
 .linearstar:hover .span0bar{
     transform: scaleY(1)

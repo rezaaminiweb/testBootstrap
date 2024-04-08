@@ -74,7 +74,7 @@ body {
 .parent {
   width: 100%;
   background-color: #c1282a;
-  padding: 0.6rem 0rem;
+  padding: 0rem 0rem;
 }
 
 .ulnav2 {
@@ -580,6 +580,63 @@ body {
   background-color: #c1282a;
   color: white;
   transition: 0.4s ease-in-out;
+}
+
+.ulhayenav {
+  list-style-type: none;
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: top;
+  transition: 0.4s ease-in-out;
+}
+
+.shadowimg {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.467);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.shadowimg:hover {
+  transform: translateY(-8px);
+}
+
+.zirmenu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.zirmenu:hover > ul {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.ulnav01 {
+  list-style-type: none;
+  width: 200%;
+  font-family: poppinsBold;
+  z-index: 50;
+  text-transform: capitalize;
+}
+
+.span0bar {
+  display: flex;
+  width: 3px;
+  height: 100%;
+  background-color: red;
+  transform: scaleY(0);
+  transition: 0.4s ease-in-out;
+  z-index: 90;
+}
+
+.linearstar:hover .span0bar {
+  transform: scaleY(1);
+}
+
+.linav02 {
+  padding: 1rem 0.5rem;
+}
+
+.ulhayenav > .w-20 {
+  width: 20%;
 }
 
 .Learnhref:hover {
